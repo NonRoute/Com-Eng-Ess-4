@@ -1,12 +1,27 @@
-html, body {
-  width: 100%;
-  height:100%;
-  margin: 0;
-  padding: 0;
-  border: none;
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
 
+#header {
+    height: 100px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0 0 0 0;
+}
 
+.quotebutton {
+    height: 180px;
+    margin: 1.667%;
+    width: 30%;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    float: left;
+}
 
 body {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
