@@ -142,9 +142,9 @@ body {
 
 form {}
 
-input {
+.textarea {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
     margin-bottom: 10px;
     border: none;
@@ -207,7 +207,8 @@ input {
 }
 
 .poll-text,
-.vote-count {
+.vote-count,
+#addbutton {
     /* Unselectable text */
     -webkit-touch-callout: none;
     /* iOS Safari */
@@ -223,3 +224,4 @@ input {
     /* Non-prefixed version, currently
 supported by Chrome, Edge, Opera and Firefox */
 }
+

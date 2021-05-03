@@ -23,12 +23,12 @@
         <tr>
             <td class="postit" id="first" rowspan="2">
                 <p class="rank">Rank 1</p>
-                <q id="firText">อ้ายมาคนเดียว</q>
+                <q id="firText">-</q>
                 <p id="firVote">0</p>
             </td>
             <td class="postit" id="second">
                 <p class="rank">Rank 2</p>
-                <q id="secText">อ้ายมาสองคน</q>
+                <q id="secText">-</q>
                 <p id="secVote">0</p>
                 <p>
             </td>
@@ -37,7 +37,7 @@
 
             <td class="postit" id="third">
                 <p class="rank">Rank 3</p>
-                <q id="triText">อ้ายมาสามคน</q>
+                <q id="triText">-</q>
                 <p id="triVote">0</p>
             </td>
 
@@ -48,7 +48,7 @@
 
     <div id="pollrepo">
         <div id="addbutton" onclick="on();clearForm();">
-            <h3>+add your SPAM</h3>
+            <h3>+ ADD YOUR SPAM</h3>
         </div>
         <div id="pollList">
             <!-- <div class="pollelement" data-worth=0>
@@ -65,9 +65,9 @@
     <div id="overlay">
         <div class="wrap">
             <form>
-                <input type="text" id="yw" placeholder="your words here"></input>
-                <input type="text" id="pn" placeholder="pen name(optional)"></input>
-                <button type="button" onclick="off();addPoll();clearForm();">SUBMIT</button>
+                <textarea class="textarea" id="yw" placeholder="your words here"></textarea>
+                <textarea class="textarea" id="pn" placeholder="pen name (optional)"></textarea>
+                <button type="button" onclick="off();addPoll();clearForm();updateTopThree();">SUBMIT</button>
                 <button type="button" onclick="autoGenerate()">AUTO GENERATE</button>
                 <button type="button" onclick="off();clearForm();">CANCEL</button>
             </form>

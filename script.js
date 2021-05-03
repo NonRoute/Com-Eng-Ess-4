@@ -107,7 +107,6 @@ function sortPoll() {
 }
 
 function updateTopThree() {
-    console.log("update top 3");
     const myElement = document.getElementById('pollList');
     for (let i = 0; i < myElement.children.length; i++) {
         if (i == 0) {
