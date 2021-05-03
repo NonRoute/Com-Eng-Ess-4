@@ -17,58 +17,61 @@
     <div id="header">
         <img id="logo" src="res/logo.png">
     </div>
-    
-    
+
+
     <table id="showcase">
         <tr>
             <td class="postit" id="first" rowspan="2">
+                <p class="rank">Rank 1</p>
                 <q id="firText">อ้ายมาคนเดียว</q>
-                <q id="firVote">0</q>
+                <p id="firVote">0</p>
             </td>
             <td class="postit" id="second">
+                <p class="rank">Rank 2</p>
                 <q id="secText">อ้ายมาสองคน</q>
-                <q id="secVote">0</q>
+                <p id="secVote">0</p>
                 <p>
             </td>
         </tr>
         <tr>
-            
+
             <td class="postit" id="third">
-                <q id="thiText">อ้ายมาสามคน</q>
-                <q id="thiVote">0</q>
+                <p class="rank">Rank 3</p>
+                <q id="triText">อ้ายมาสามคน</q>
+                <p id="triVote">0</p>
             </td>
-                
+
         </tr>
-        
-        
+
+
     </table>
-    
-        <div id="pollrepo">
-            <div id="addbutton" onclick="on();clearForm();">
-                <h3>+add your SPAM</h3>
-            </div>
-            <div id="pollList">
-              <!-- <div class="pollelement" data-worth=0>
+
+    <div id="pollrepo">
+        <div id="addbutton" onclick="on();clearForm();">
+            <h3>+add your SPAM</h3>
+        </div>
+        <div id="pollList">
+            <!-- <div class="pollelement" data-worth=0>
                   <table class="poll-table">
                       <tr>
-                        <th class="poll-text">Quote</th>
-                        <th class="vote-count">1</th>
+                        <td class="poll-text">Quote</td>
+                        <td class="vote-count">1</td>
                       </tr>
                   </table>
               </div> -->
-            </div>
         </div>
-    
+    </div>
+
     <div id="overlay">
-      <div class="wrap">
-          <form>
-            <input type="text" id="yw" placeholder="your words here"></input>
-            <input type="text" id="pn" placeholder="pen name(optional)"></input>
-            <button type="button" onclick="off();addPoll();clearForm();">SUBMIT</button>
-            <button type="button" onclick="autoGenerate()">AUTO GENERATE</button>
-            <button type="button" onclick="off();clearForm();">CANCEL</button>
-          </form>
-      </div>
+        <div class="wrap">
+            <form>
+                <input type="text" id="yw" placeholder="your words here"></input>
+                <input type="text" id="pn" placeholder="pen name(optional)"></input>
+                <button type="button" onclick="off();addPoll();clearForm();">SUBMIT</button>
+                <button type="button" onclick="autoGenerate()">AUTO GENERATE</button>
+                <button type="button" onclick="off();clearForm();">CANCEL</button>
+            </form>
+        </div>
     </div>
 </body>
 

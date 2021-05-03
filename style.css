@@ -8,7 +8,6 @@ body {
 }
 
 body {
-    
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
@@ -26,130 +25,124 @@ body {
     }
 }
 
-#header{
-    height:100px;
-    width:100%;
-    background:
-    rgba(0,0,0,0.4);
-    padding:0 0 0 0;
-}
-#logo{
-    margin-left:10px;
-    margin-bottom:5px;
-    height:100%
-}
-#showcase{
-    width:61.8%;
-    height:350px;
-    margin:auto;
-    margin-top:2%;
-    border-radius:8px;
-    background:rgba(0,0,0,0.3);
-    border-spacing:20px;
-    overflow-wrap:break-word;
-    
+#header {
+    height: 100px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 0 0 0 0;
 }
 
-.postit{
-    background:rgba(255,255,255,0.3);
-    border-radius:10px;
+#logo {
+    margin-left: 10px;
+    margin-bottom: 5px;
+    height: 100%
+}
+
+#showcase {
+    width: 61.8%;
+    height: 350px;
+    margin: auto;
+    margin-top: 2%;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.3);
+    border-spacing: 20px;
+    overflow-wrap: break-word;
+}
+
+.postit {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
     text-align: center;
-    text-justify:auto;
+    text-justify: auto;
     padding: 30px;
 }
 
-#first{
-    width:61.8%;
-    height:100%;
+#first {
+    width: 61.8%;
+    height: 100%;
 }
 
-#second{
-    width:31.2%;
-    height:61.8%
+#second {
+    width: 31.2%;
+    height: 61.8%
 }
 
-#third{
-    width:31.2%;
-    height:31.2%
+#third {
+    width: 31.2%;
+    height: 31.2%
 }
 
-
-#pollrepo{
-    box-sizing:border-box;
-    width:61.8%;
-    min-height:100px;
+#pollrepo {
+    box-sizing: border-box;
+    width: 61.8%;
+    min-height: 100px;
     padding: 5px;
-    margin:auto;
-    margin-top:1%;
-    border-radius:8px;
-    background:rgba(0,0,0,0.3)
+    margin: auto;
+    margin-top: 1%;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.3)
 }
 
-.pollelement{
+.pollelement {
     display: flex;
     justify-content: center;
-    min-height:40px;
-    margin:30px;
-    margin-top:12px;
+    min-height: 40px;
+    margin: 30px;
+    margin-top: 12px;
     margin-bottom: 12px;
-    border-radius:25px;
-    background-color:rgba(255,255,255,0.5);
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.5);
     ;
 }
 
-#addbutton{
-    display:table;
-    height:40px;
-    width:200px;
-    margin:auto;
-    margin-top:25px;
-    border-radius:25px;
-    text-align:center;
-    color:rgba(255,255,255,0.7);
-    margin-bottom:30px;
-    background-color:rgba(0,0,0,0.5);
+#addbutton {
+    display: table;
+    height: 40px;
+    width: 200px;
+    margin: auto;
+    margin-top: 25px;
+    border-radius: 25px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
     transition: 0.5s;
-    transition-timimg-curve:ease
+    transition-timing-function: ease
 }
-#addbutton:hover{
-    background-color:rgba(255,255,255,0.3);
-    color:black;
+
+#addbutton:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black;
 }
 
 #overlay {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 2;
-  backdrop-filter: blur(8px);
-  cursor: pointer;
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    backdrop-filter: blur(8px);
+    cursor: pointer;
 }
 
-.wrap{
+.wrap {
     max-width: 300px;
     height: 320;
     margin: auto;
     padding: 20px;
-    background: rgba(20,20,20,1);
+    background: rgba(20, 20, 20, 1);
     margin-top: 10%;
     border-radius: 10px;
 }
 
+form {}
 
-
-form{
-   
-    
-    
-}
-
-input{
+input {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
@@ -161,8 +154,8 @@ input{
     text-align: center;
 }
 
-#yw{
-    height:280px;
+#yw {
+    height: 280px;
     margin-bottom: 20px;
 }
 
@@ -170,17 +163,24 @@ input{
     align-self: center;
     width: 90%;
 }
+
 .poll-text {
     font-weight: normal;
     text-align: left;
     /* Unselectable text */
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+    supported by Chrome, Edge, Opera and Firefox */
 }
 
 .vote-count {
@@ -188,12 +188,38 @@ input{
     text-align: right;
     font-size: 30px;
     color: green;
+}
+
+#firVote,
+#secVote,
+#triVote {
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    color: green;
+}
+
+.rank {
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(207, 181, 59);
+}
+
+.poll-text,
+.vote-count {
     /* Unselectable text */
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+supported by Chrome, Edge, Opera and Firefox */
 }
