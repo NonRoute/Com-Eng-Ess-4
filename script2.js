@@ -11,9 +11,6 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
-  const db = firebase.firestore();
-
-
 function on() {
     document.getElementById("overlay").style.display = "block";
 }
@@ -36,13 +33,13 @@ function clearForm() {
 }
 
 function addPoll() {
+    console.log('addPoll');
+
     const poll = document.getElementById("pollList");
     const pollelement = document.createElement("div");
-    pollelement.setAttribute("data-worth",0);
+    
     pollelement.onclick = function() {
       voteCount.innerText++;
-      pollelement.setAttribute("data-worth",voteCount.innerText);
-      sortPoll();
     };
     pollelement.className = "pollelement";
     const pollTable = document.createElement("table");
@@ -61,9 +58,10 @@ function addPoll() {
     tr.appendChild(voteCount);
 }
 
-function sortPoll() {
-  const container = document.getElementById("pollList");
-  Array.from(container.children)
-    .sort((a, b) => b.dataset.worth - a.dataset.worth)
-    .forEach(element => container.appendChild(element));
+function someFunction(){
+ var $wrapper = $('#pollList');
+	$wrapper.find('.item').sort(function (a, b) {
+    return +b.dataset.worth - a.dataset.worth;
+})
+.appendTo( $wrapper );
 }

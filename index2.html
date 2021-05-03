@@ -1,38 +1,73 @@
 <!DOCTYPE html>
+<html>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-
-    <h1 id='bigOne1'></h1>
-
+    <title>test webpage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+    <!-- /*<script src="jquery-3.5.1.min.js"></script> -->
+    <script src="script2.js"></script>
+</head>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
-         https://firebase.google.com/docs/web/setup#available-libraries -->
+<body style="padding:0;">
+    <div id="header">
+        <img id="logo" src="res/logo.png">
+    </div>
+    
+    
+    <table id="showcase">
+        <tr>
+            <td class="postit" id="first" rowspan="2">
+                <q></q>
+            </td>
+            <td class="postit" id="second">
+                <q>ฟฟฟฟฟฟฟฟฟฟฟฟฟฟหาก่ฟสหกา่ฟหสกาฟ่หกสฟา่หกสฟาห่กฟสหาก่ฟสหากฟสหาก่ฟหสกฟหกฟหกฟสหากสฟกาห</q>
+                <p>
+            </td>
+        </tr>
+        <tr>
+            
+            <td class="postit" id="third">
+                <q></q>
+            </td>
+                
+        </tr>
+        
+        
+    </table>
+    
+        <div id="pollrepo">
+            <div id="addbutton" onclick="on()">
+                <h3>+add your SPAM</h3>
+            </div>
+            <div id="pollList">
+              <!-- <div class="pollelement" id="poll-1">
+                  <table class="poll-table">
+                      <tr>
+                        <th class="poll-text">Quote</th>
+                        <th class="vote-count">1</th>
+                      </tr>
+                  </table>
+              </div> -->
+            </div>
+        </div>
+    
+    <div id="overlay">
+      <div class="wrap">
+          <form>
+            <input type="text" id="yw" placeholder="your words here"></input>
+            <input type="text" id="pn" placeholder="pen name(optional)"></input>
+            <button type="button" onclick="off();addPoll();clearForm();">SUBMIT</button>
+            <button type="button" onclick="autoGenerate()">AUTO GENERATE</button>
+            <button type="button" onclick="off();clearForm();">CANCEL</button>
+          </form>
+      </div>
+    </div>
 
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyDZSDeBS6BpfcNoVkrWfx-uNeLZMscOo1o",
-            authDomain: "projectengess.firebaseapp.com",
-            databaseURL: "https://projectengess-default-rtdb.asia-southeast1.firebasedatabase.app",
-            projectId: "projectengess",
-            storageBucket: "projectengess.appspot.com",
-            messagingSenderId: "434969956116",
-            appId: "1:434969956116:web:f5d7ac191e382b821d3c01"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-
-        var bigOne2 = document.getElementById("bigOne1");
-        var db = firebase.database().ref().child('a');
-        db.on('value', snap => bigOne2.innerText = snap.val());
-
-    </script>
+    <button onclick="sortPoll()">sort Poll</button>
 </body>
+
 </html>
