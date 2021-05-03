@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
-    <script src="script.js"></script>
+    <!-- /*<script src="jquery-3.5.1.min.js"></script> -->
+    <script src="script2.js"></script>
 </head>
 
 <body style="padding:0;">
@@ -22,20 +21,17 @@
     <table id="showcase">
         <tr>
             <td class="postit" id="first" rowspan="2">
-                <q id="firText">อ้ายมาคนเดียว</q>
-                <q id="firVote">0</q>
+                <q></q>
             </td>
             <td class="postit" id="second">
-                <q id="secText">อ้ายมาสองคน</q>
-                <q id="secVote">0</q>
+                <q>ฟฟฟฟฟฟฟฟฟฟฟฟฟฟหาก่ฟสหกา่ฟหสกาฟ่หกสฟา่หกสฟาห่กฟสหาก่ฟสหากฟสหาก่ฟหสกฟหกฟหกฟสหากสฟกาห</q>
                 <p>
             </td>
         </tr>
         <tr>
             
             <td class="postit" id="third">
-                <q id="thiText">อ้ายมาสามคน</q>
-                <q id="thiVote">0</q>
+                <q></q>
             </td>
                 
         </tr>
@@ -44,11 +40,11 @@
     </table>
     
         <div id="pollrepo">
-            <div id="addbutton" onclick="on();clearForm();">
+            <div id="addbutton" onclick="on()">
                 <h3>+add your SPAM</h3>
             </div>
             <div id="pollList">
-              <!-- <div class="pollelement" data-worth=0>
+              <!-- <div class="pollelement" id="poll-1">
                   <table class="poll-table">
                       <tr>
                         <th class="poll-text">Quote</th>
@@ -70,8 +66,8 @@
           </form>
       </div>
     </div>
+
+    <button onclick="sortPoll()">sort Poll</button>
 </body>
-
-
 
 </html>
