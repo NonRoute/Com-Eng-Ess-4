@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
 </head>
 
 <body style="padding:0;">
@@ -40,26 +41,26 @@
             <div id="addbutton" onclick="on()">
                 <h3>+add your SPAM</h3>
             </div>
-            <div class="pollelement" id="poll-1">
-                <table class="poll-table">
-                    <tr>
-                      <th class="poll-text">Quote</th>
-                      <th class="vote-count">1</th>
-                    </tr>
-                </table>
+            <div id="pollList">
+              <!-- <div class="pollelement" id="poll-1">
+                  <table class="poll-table">
+                      <tr>
+                        <th class="poll-text">Quote</th>
+                        <th class="vote-count">1</th>
+                      </tr>
+                  </table>
+              </div> -->
             </div>
         </div>
     
-    
-
     <div id="overlay">
       <div class="wrap">
           <form>
             <input type="text" id="yw" placeholder="your words here"></input>
             <input type="text" id="pn" placeholder="pen name(optional)"></input>
-            <button type="button" onclick="off()">SUBMIT</button>
+            <button type="button" onclick="off();addPoll();clearForm();">SUBMIT</button>
             <button type="button" onclick="autoGenerate()">AUTO GENERATE</button>
-            <button type="button" onclick="off()">CANCEL</button>
+            <button type="button" onclick="off();clearForm();">CANCEL</button>
           </form>
       </div>
     </div>

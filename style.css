@@ -168,13 +168,16 @@ input{
 
 .poll-table {
     align-self: center;
-    width: 95%;
-    border: 1px solid black;
+    width: 90%;
 }
 .poll-text {
+  font-weight: normal;
     text-align: left;
 }
 
 .vote-count {
+    font-weight: bold;
     text-align: right;
+    font-size: 30px;
+    color: green;
 }

@@ -24,3 +24,32 @@ async function autoGenerate() {
     document.getElementById("yw").value = data.content;
     document.getElementById("pn").value = data.author;
 }
+
+function clearForm() {
+  document.getElementById("yw").value = "";
+  document.getElementById("pn").value = "";
+}
+
+function addPoll() {
+    const poll = document.getElementById("pollList");
+    const pollelement = document.createElement("div");
+    pollelement.onclick = function() {
+      voteCount.innerText++;
+    };
+    pollelement.className = "pollelement";
+    const pollTable = document.createElement("table");
+    pollTable.className = "poll-table"
+    const tr = document.createElement("tr");
+    const pollText = document.createElement("td");
+    pollText.className = "poll-text"
+    pollText.innerText = document.getElementById("yw").value+" - "+document.getElementById("pn").value;
+    const voteCount = document.createElement("td");
+    voteCount.className = "vote-count"
+    voteCount.innerText = 0;
+    poll.appendChild(pollelement);
+    pollelement.appendChild(pollTable);
+    pollTable.appendChild(tr);
+    tr.appendChild(pollText);
+    tr.appendChild(voteCount);
+}
+
