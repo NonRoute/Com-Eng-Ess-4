@@ -86,6 +86,8 @@ body {
 }
 
 .pollelement{
+    display: flex;
+    justify-content: center;
     min-height:40px;
     margin:30px;
     margin-top:12px;
@@ -162,4 +164,17 @@ input{
 #yw{
     height:280px;
     margin-bottom: 20px;
+}
+
+.poll-table {
+    align-self: center;
+    width: 95%;
+    border: 1px solid black;
+}
+.poll-text {
+    text-align: left;
+}
+
+.vote-count {
+    text-align: right;
 }
