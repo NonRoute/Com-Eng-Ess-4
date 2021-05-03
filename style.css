@@ -7,23 +7,8 @@ body {
     border: none;
 }
 
-#header {
-    height: 100px;
-    width: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 0 0 0 0;
-}
-
-.quotebutton {
-    height: 180px;
-    margin: 1.667%;
-    width: 30%;
-    border-radius: 5px;
-    background: rgba(0, 0, 0, 0.5);
-    float: left;
-}
-
 body {
+    
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
@@ -39,4 +24,142 @@ body {
     100% {
         background-position: 0% 50%;
     }
+}
+
+#header{
+    height:100px;
+    width:100%;
+    background:
+    rgba(0,0,0,0.4);
+    padding:0 0 0 0;
+}
+#logo{
+    margin-left:10px;
+    margin-bottom:5px;
+    height:100%
+}
+#showcase{
+    width:61.8%;
+    height:350px;
+    margin:auto;
+    margin-top:2%;
+    border-radius:8px;
+    background:rgba(0,0,0,0.3);
+    border-spacing:20px;
+    overflow-wrap:break-word;
+    
+}
+
+.postit{
+    background:rgba(255,255,255,0.3);
+    border-radius:10px;
+    text-align: center;
+    text-justify:auto;
+    padding: 30px;
+}
+
+#first{
+    width:61.8%;
+    height:100%;
+}
+
+#second{
+    width:31.2%;
+    height:61.8%
+}
+
+#third{
+    width:31.2%;
+    height:31.2%
+}
+
+
+#pollrepo{
+    box-sizing:border-box;
+    width:61.8%;
+    min-height:100px;
+    padding: 5px;
+    margin:auto;
+    margin-top:1%;
+    border-radius:8px;
+    background:rgba(0,0,0,0.3)
+}
+
+.pollelement{
+    min-height:40px;
+    margin:30px;
+    margin-top:12px;
+    margin-bottom: 12px;
+    border-radius:25px;
+    background-color:rgba(255,255,255,0.5);
+    ;
+}
+
+#addbutton{
+    display:table;
+    height:40px;
+    width:200px;
+    margin:auto;
+    margin-top:25px;
+    border-radius:25px;
+    text-align:center;
+    color:rgba(255,255,255,0.7);
+    margin-bottom:30px;
+    background-color:rgba(0,0,0,0.5);
+    transition: 0.5s;
+    transition-timimg-curve:ease
+}
+#addbutton:hover{
+    background-color:rgba(255,255,255,0.3);
+    color:black;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+}
+
+.wrap{
+    max-width: 300px;
+    height: 320;
+    margin: auto;
+    padding: 20px;
+    background: rgba(20,20,20,1);
+    margin-top: 10%;
+    border-radius: 10px;
+}
+
+
+
+form{
+   
+    
+    
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+}
+
+#yw{
+    height:280px;
+    margin-bottom: 20px;
 }
