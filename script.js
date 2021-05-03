@@ -74,7 +74,7 @@ async function addPoll() {
     pollelement.setAttribute("data-worth", voteCount.innerText);
     sortPoll();
     updateTopThree();
-    showPollsInTable();
+    // showPollsInTable();
   };
   const pollTable = document.createElement("table");
   pollTable.className = "poll-table"
@@ -107,20 +107,24 @@ function sortPoll() {
 }
 
 function updateTopThree() {
-  // const myElement = document.getElementById('pollList');
-  //   for (let i = 0; i < myElement.children.length; i++) {
-  //     if(i==0) {
-  //       const first = document.getElementById("first");
-  //       console.log(myElement.getElementsByClassName('pollelement'));
-  //       first.firText = myElement.getElementsByClassName('pollelement').getElementsByClassName('poll-text').innerText;
-  //       // first.firText = myElement.children[i].table.tr.td;
-  //     } else if (i==1) {
-  //       const second = document.getElementById("second");
-  //       second.secText = myElement.children[i].table.tr.td;
-  //     } else if (i==2) {
-  //       const third = document.getElementById("third");
-  //       third.thiText = myElement.children[i].table.tr.td;
-  //     }
-  //     // console.log(myElement.children[i].tagName);
-  //   }
+  console.log("update top 3");
+  const myElement = document.getElementById('pollList');
+    for (let i = 0; i < myElement.children.length; i++) {
+      if(i==0) {
+        document.getElementById("firText").innerText =
+        myElement.getElementsByClassName('pollelement')[0].getElementsByClassName('poll-text')[0].innerText;
+        document.getElementById("firVote").innerText =
+        myElement.getElementsByClassName('pollelement')[0].getElementsByClassName('vote-count')[0].innerText;
+      } else if (i==1) {
+        document.getElementById("secText").innerText =
+        myElement.getElementsByClassName('pollelement')[1].getElementsByClassName('poll-text')[0].innerText;
+        document.getElementById("secVote").innerText =
+        myElement.getElementsByClassName('pollelement')[1].getElementsByClassName('vote-count')[0].innerText;
+      } else if (i==2) {
+        document.getElementById("thiText").innerText =
+        myElement.getElementsByClassName('pollelement')[2].getElementsByClassName('poll-text')[0].innerText;
+        document.getElementById("secVote").innerText =
+        myElement.getElementsByClassName('pollelement')[2].getElementsByClassName('vote-count')[0].innerText;
+      }
+    }
 }
