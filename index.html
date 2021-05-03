@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
     <script src="script.js"></script>
 </head>
 
@@ -20,17 +22,17 @@
     <table id="showcase">
         <tr>
             <td class="postit" id="first" rowspan="2">
-                <q></q>
+                <q id=firText>อ้ายมาคนเดียว</q>
             </td>
             <td class="postit" id="second">
-                <q>ฟฟฟฟฟฟฟฟฟฟฟฟฟฟหาก่ฟสหกา่ฟหสกาฟ่หกสฟา่หกสฟาห่กฟสหาก่ฟสหากฟสหาก่ฟหสกฟหกฟหกฟสหากสฟกาห</q>
+                <q id=secText>อ้ายมาสองคน</q>
                 <p>
             </td>
         </tr>
         <tr>
             
             <td class="postit" id="third">
-                <q></q>
+                <q id=thiText>อ้ายมาสามคน</q>
             </td>
                 
         </tr>
@@ -39,11 +41,11 @@
     </table>
     
         <div id="pollrepo">
-            <div id="addbutton" onclick="on()">
+            <div id="addbutton" onclick="on();clearForm();">
                 <h3>+add your SPAM</h3>
             </div>
             <div id="pollList">
-              <!-- <div class="pollelement" id="poll-1">
+              <!-- <div class="pollelement" data-worth=0>
                   <table class="poll-table">
                       <tr>
                         <th class="poll-text">Quote</th>
