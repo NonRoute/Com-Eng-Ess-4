@@ -13,7 +13,7 @@
     <script src="script.js"></script>
 </head>
 
-<body style="padding:0;">
+<body style="padding:0;" onload="showPollsInTable()">
     <div id="header">
         <img id="logo" src="res/logo.png">
     </div>
@@ -51,6 +51,7 @@
             <h3>+ ADD YOUR SPAM</h3>
         </div>
         <div id="pollList">
+            
             <!-- <div class="pollelement" data-worth=0>
                   <table class="poll-table">
                       <tr>
@@ -67,12 +68,15 @@
             <form>
                 <textarea class="textarea" id="yw" placeholder="your words here"></textarea>
                 <textarea class="textarea" id="pn" placeholder="pen name (optional)"></textarea>
-                <button type="button" onclick="off();addPoll();clearForm();updateTopThree();">SUBMIT</button>
+                <button type="button" onclick="off();addPoll();addItem();clearForm();updateTopThree();">SUBMIT</button>
                 <button type="button" onclick="autoGenerate()">AUTO GENERATE</button>
                 <button type="button" onclick="off();clearForm();">CANCEL</button>
             </form>
         </div>
     </div>
+
+    <button onclick="deleteAllItem()">deleteAllitem</button>
+    <button onclick="showPollsInTable()">showPollsInTable</button>
 </body>
 
 
