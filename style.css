@@ -83,6 +83,18 @@ body {
     background: rgba(0, 0, 0, 0.3)
 }
 
+#tool{
+    box-sizing: border-box;
+    text-align: center;
+    width: 61.8%;
+    min-height: 100px;
+    padding: 5px;
+    margin: auto;
+    margin-top: 1%;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.3)
+}
+
 .pollelement {
     display: flex;
     justify-content: center;
@@ -108,6 +120,14 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     transition: 0.5s;
     transition-timing-function: ease
+}
+.tool-button {
+    height: 40px;
+    width: 150px;
+    margin: auto;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 #addbutton:hover {
@@ -140,11 +160,9 @@ body {
     border-radius: 10px;
 }
 
-form {}
-
-input {
+.textarea {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     box-sizing: border-box;
     margin-bottom: 10px;
     border: none;
@@ -207,7 +225,8 @@ input {
 }
 
 .poll-text,
-.vote-count {
+.vote-count,
+#addbutton {
     /* Unselectable text */
     -webkit-touch-callout: none;
     /* iOS Safari */
@@ -223,3 +242,4 @@ input {
     /* Non-prefixed version, currently
 supported by Chrome, Edge, Opera and Firefox */
 }
+
