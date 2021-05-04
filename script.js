@@ -33,7 +33,7 @@ async function autoGenerate() {
 
 async function showPollsInTable() {
 
-    console.log('showing polls from database');
+    // console.log('showing polls from database');
 
     const table_body = document.getElementById('pollList');
     table_body.innerHTML = '';
@@ -57,13 +57,27 @@ function clearForm() {
 }
 
 async function addPoll(text = document.getElementById("yw").value + " - " + document.getElementById("pn").value, vote=0, docId=0) {
-    // console.log("docId ="+docId);
+    // console.log("ADD POLL")
     const pollList = document.getElementById("pollList");
     const pollelement = document.createElement("div");
     pollelement.className = "pollelement";
     pollelement.setAttribute("data-worth", vote);
-    pollelement.onclick = function() {
-        voteCount.innerText++;
+    pollelement.onclick = async function() {
+        //updateItem(docId,text,voteCount.innerText);
+        //showPollsInTable();
+        if (docId!=0) {
+          const poll_ref = await db.doc(`pollList/${docId}`);
+          let book_instance = await poll_ref.get()
+          book_instance = book_instance.data();
+          // console.log("vote = "+book_instance.voteCount);
+          let count = book_instance.voteCount;
+          count = parseInt(count, 10);
+          voteCount.innerText = count+1;
+          //voteCount.innerText = parseInt(getVoteCount(docId))+1;
+          // console.log("InnerText = "+voteCount.innerText);
+        } else {
+          voteCount.innerText++;
+        }
         pollelement.setAttribute("data-worth", voteCount.innerText);
         updateItem(docId,text,voteCount.innerText);
         sortPoll();
@@ -84,9 +98,29 @@ async function addPoll(text = document.getElementById("yw").value + " - " + docu
     tr.appendChild(pollText);
     tr.appendChild(voteCount);
 }
-async function deleteAllItem() {
-  //Not finish
 
+async function deleteAllItem() {
+    console.log('delete polls from database');
+    const table_body = document.getElementById('pollList');
+    table_body.innerHTML = '';
+    const collection = 'pollText';
+    const items = await pollText_ref.get();
+    const Poll_list = items.docs.map((item) => ({ docId: item.id, ...item.data() }))
+    Poll_list.map((item) => {
+        deleteI(item["docId"]);
+    })
+}
+
+async function deleteI(id) {
+    const res = await db.collection('pollList').doc(id).delete();
+}
+
+async function getVoteCount(docId) {
+    const poll_ref = await db.doc(`pollList/${docId}`);
+    let book_instance = await poll_ref.get()
+    book_instance = book_instance.data();
+    console.log("vote = "+book_instance.voteCount);
+    return book_instance.voteCount;
 }
 
 async function updateItem(docId,newText,newVote) {
@@ -105,6 +139,7 @@ async function updateItem(docId,newText,newVote) {
         voteCount: voteCount ? voteCount : book_instance.voteCount,
     }).then(function () {
         console.log('updateItem success')
+        //SHOW POLLS IN TABLE
         showPollsInTable();
     }).catch(function (error) {
         console.log('failed', error)
@@ -121,12 +156,6 @@ function addItem(text = document.getElementById("yw").value + " - " + document.g
         voteCount,
     })
 }
-
-// function sortPollInDataBase() {
-//     console.log("SORT DATA BASE")
-//     var mostViewedPosts = firebase.database().ref('pollList').orderByChild('voteCount');
-//      console.log("SORT DATA BASE FINISH")
-// }
 
 function sortPoll() {
     console.log("SORT POLL");

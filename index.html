@@ -68,15 +68,15 @@
             <form>
                 <textarea class="textarea" id="yw" placeholder="your words here"></textarea>
                 <textarea class="textarea" id="pn" placeholder="pen name (optional)"></textarea>
-                <button type="button" onclick="off();addPoll();addItem();clearForm();updateTopThree();">SUBMIT</button>
+                <button type="button" onclick="off();addItem();showPollsInTable();clearForm();updateTopThree();">SUBMIT</button>
                 <button type="button" onclick="autoGenerate()">AUTO GENERATE</button>
                 <button type="button" onclick="off();clearForm();">CANCEL</button>
             </form>
         </div>
     </div>
 
-    <button onclick="deleteAllItem()">deleteAllitem</button>
-    <button onclick="showPollsInTable()">showPollsInTable</button>
+    <button onclick="deleteAllItem()">delete all item</button>
+    <button onclick="showPollsInTable()">showPollsInTable (RELOAD POLL)</button>
     <button onclick="sortPoll()">sortPoll</button>
     
 </body>
