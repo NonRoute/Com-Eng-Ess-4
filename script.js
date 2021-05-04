@@ -46,6 +46,9 @@ async function showPollsInTable() {
         addPoll(item["pollText"], item["voteCount"], item["docId"]);
     })
     console.log("Showing polls finish")
+    
+    sortPoll();
+    updateTopThree();
 }
 
 function clearForm() {
@@ -58,13 +61,13 @@ async function addPoll(text = document.getElementById("yw").value + " - " + docu
     const pollList = document.getElementById("pollList");
     const pollelement = document.createElement("div");
     pollelement.className = "pollelement";
-    pollelement.setAttribute("data-worth", 0);
+    pollelement.setAttribute("data-worth", vote);
     pollelement.onclick = function() {
         voteCount.innerText++;
         pollelement.setAttribute("data-worth", voteCount.innerText);
+        updateItem(docId,text,voteCount.innerText);
         sortPoll();
         updateTopThree();
-        updateItem(docId,text,voteCount.innerText);
      };
     const pollTable = document.createElement("table");
     pollTable.className = "poll-table"
@@ -88,14 +91,14 @@ async function deleteAllItem() {
 
 async function updateItem(docId,newText,newVote) {
     console.log('updateItem');
-    console.log('Update '+docId)
+    // console.log('Update '+docId)
     const poll_ref = await db.doc(`pollList/${docId}`);
 
     let book_instance = await poll_ref.get()
     book_instance = book_instance.data();
     
     let pollText = newText;
-    let voteCount = newVote;
+    let voteCount = parseInt(newVote, 10);
 
     poll_ref.set({
         pollText: pollText ? pollText : book_instance.pollText,
@@ -119,8 +122,14 @@ function addItem(text = document.getElementById("yw").value + " - " + document.g
     })
 }
 
+// function sortPollInDataBase() {
+//     console.log("SORT DATA BASE")
+//     var mostViewedPosts = firebase.database().ref('pollList').orderByChild('voteCount');
+//      console.log("SORT DATA BASE FINISH")
+// }
 
 function sortPoll() {
+    console.log("SORT POLL");
     const container = document.getElementById("pollList");
     Array.from(container.children)
         .sort((a, b) => b.dataset.worth - a.dataset.worth)
