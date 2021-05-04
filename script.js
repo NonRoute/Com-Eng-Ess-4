@@ -36,10 +36,10 @@ async function showPollsInTable() {
     // console.log('showing polls from database');
 
     const table_body = document.getElementById('pollList');
-    table_body.innerHTML = '';
 
     const collection = 'pollText';
     const items = await pollText_ref.get();
+    table_body.innerHTML = '';
     const Poll_list = items.docs.map((item) => ({ docId: item.id, ...item.data() }))
     //  console.log(Poll_list);
     Poll_list.map((item) => {
